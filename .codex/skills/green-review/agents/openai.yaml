@@ -1,0 +1,4 @@
+interface:
+  display_name: "Revisión Verde"
+  short_description: "Revisión estructurada de software verde"
+  default_prompt: "Usa $green-review para auditar este cambio con criterios de software verde."

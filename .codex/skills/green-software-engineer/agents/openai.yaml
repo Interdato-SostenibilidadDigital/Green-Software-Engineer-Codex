@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ingeniería de Software Verde"
+  short_description: "Asesoría sostenible y arquitectura baja en carbono"
+  default_prompt: "Usa $green-software-engineer para revisar este cambio backend con criterios de eficiencia de carbono."
