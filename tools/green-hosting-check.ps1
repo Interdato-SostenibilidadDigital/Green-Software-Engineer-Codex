@@ -7,7 +7,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-function Normalize-Hostname {
+function ConvertTo-Hostname {
     param([string] $InputValue)
 
     $value = $InputValue.Trim()
@@ -16,7 +16,7 @@ function Normalize-Hostname {
     }
 
     if ($value -match "^[a-zA-Z][a-zA-Z0-9+.-]*://") {
-        $uri = [System.Uri]::new($value)
+        $uri = New-Object System.Uri($value)
         return $uri.Host.ToLowerInvariant()
     }
 
@@ -66,7 +66,7 @@ function Invoke-Greencheck {
 }
 
 $results = foreach ($domain in $Domains) {
-    $hostname = Normalize-Hostname -InputValue $domain
+    $hostname = ConvertTo-Hostname -InputValue $domain
     Invoke-Greencheck -Hostname $hostname
 }
 
