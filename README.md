@@ -140,12 +140,18 @@ Este check complementa el análisis de infraestructura y puede informar el compo
 
 Si un equipo usa estas skills para revisar un sistema y documenta sus decisiones de sostenibilidad, puede usar este distintivo como señal de auto-declaración:
 
-[![Distintivo Software Verde Revisado](docs/assets/interdato-green-software-reviewed.svg)](https://github.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex)
+<a href="https://github.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex" target="_blank" rel="noopener noreferrer">
+  <img
+    src="docs/assets/interdato-green-software-reviewed.svg"
+    alt="Distintivo Software Verde Revisado"
+    width="280"
+  />
+</a>
 
 Embed recomendado:
 
 ```html
-<a href="https://github.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex">
+<a href="https://github.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex" target="_blank" rel="noopener noreferrer">
   <img
     src="https://raw.githubusercontent.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex/main/docs/assets/interdato-green-software-reviewed.svg"
     alt="Software Verde Revisado con Green Software Engineer for Codex"
