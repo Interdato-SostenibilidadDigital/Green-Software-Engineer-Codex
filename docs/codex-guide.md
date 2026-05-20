@@ -1,63 +1,40 @@
 # Guía de Codex
 
-## Propósito
+Esta guía explica cómo usar las skills de Green Software Engineer dentro de Codex para revisar, diseñar y medir software con criterios de sostenibilidad.
 
-Este paquete añade dos modos reutilizables de trabajo para ingeniería de software
-verde en Codex:
+## 🧭 Vista rápida
+
+| Quieres... | Usa... | Resultado esperado |
+| --- | --- | --- |
+| Evaluar una decisión técnica | `$green-software-engineer` | Recomendación directa, tradeoffs y supuestos. |
+| Revisar código o infraestructura | `$green-review` | Hallazgos priorizados por impacto probable de carbono. |
+| Estimar o preparar medición | `$green-software-engineer` | Frontera SCI, unidad funcional, datos faltantes y plan de medición. |
+| Auditar IA/ML o agentes | Ambas, según contexto | Revisión de tokens, fanout, herramientas, caché, entrenamiento e inferencia. |
+
+## 🌱 Propósito
+
+Este paquete añade dos modos reutilizables de trabajo para ingeniería de software verde en Codex:
 
 - Asesoría y diseño con `$green-software-engineer`.
 - Revisión estructurada con `$green-review`.
 
-Ambas skills están pensadas para proyectos reales, donde la sostenibilidad debe
-convivir con rendimiento, costo, confiabilidad, cumplimiento y experiencia de
-usuario.
+Ambas skills están pensadas para proyectos reales, donde la sostenibilidad debe convivir con rendimiento, costo, confiabilidad, cumplimiento y experiencia de usuario.
 
-## Casos de Uso
+## 🧩 Casos de uso por dominio
 
-### Backend, APIs y Microservicios
+| Dominio | Qué revisar |
+| --- | --- |
+| Backend, APIs y microservicios | Rutas calientes, payloads, paginación, round trips, trabajo síncrono pesado, polling, caché y límites de concurrencia. |
+| Bases de datos | Consultas N+1, scans grandes, índices faltantes, lecturas sin límite, columnas innecesarias, retención excesiva y formatos poco eficientes. |
+| Cloud e infraestructura | Sobreaprovisionamiento, servicios siempre encendidos, autoscaling, scale-to-zero, regiones cloud, capacidad spot/preemptible y jobs movibles en el tiempo. |
+| Pipelines de datos | ETL, streaming, procesamiento incremental, particionado, compresión, frecuencia de jobs y reprocesamiento innecesario. |
+| IA y ML | LLMs, RAG, agentes, embeddings, inferencia, entrenamiento, evaluación, fanout de herramientas, presupuestos de tokens y uso de GPU/TPU. |
+| Web y media | Tráfico alto, assets pesados, imágenes, video, bundles grandes, exceso de JavaScript y transferencia de datos innecesaria. |
+| Arquitectura y ADRs | Comparación de alternativas por carbono, costo, latencia, confiabilidad, complejidad y cumplimiento. |
 
-Usa el paquete para revisar rutas calientes, payloads, paginación, round trips,
-trabajo síncrono pesado, polling, caché y límites de concurrencia.
+## ✅ Cuándo usarlo
 
-### Bases de Datos
-
-Úsalo para detectar consultas N+1, scans grandes, índices faltantes, lecturas sin
-límite, columnas innecesarias, retención excesiva y formatos poco eficientes.
-
-### Cloud e Infraestructura
-
-Úsalo para revisar sobreaprovisionamiento, servicios siempre encendidos, autoscaling,
-scale-to-zero, regiones cloud, capacidad spot/preemptible y jobs que pueden moverse
-a ventanas de menor carbono.
-
-### Pipelines de Datos
-
-Úsalo para ETL, streaming, procesamiento incremental, particionado, compresión,
-frecuencia de jobs y reprocesamiento innecesario.
-
-### IA y ML
-
-Úsalo para LLMs, RAG, agentes, embeddings, inferencia, entrenamiento, evaluación,
-fanout de herramientas, presupuestos de tokens, límites de iteraciones y uso de
-GPU/TPU.
-
-### Web y Media
-
-Úsalo cuando una aplicación web tenga mucho tráfico, assets pesados, imágenes,
-video, bundles grandes, exceso de JavaScript o transferencia de datos innecesaria.
-
-### Arquitectura y ADRs
-
-Úsalo para comparar alternativas de diseño y documentar tradeoffs de carbono,
-costo, latencia, confiabilidad, complejidad y cumplimiento.
-
-## ¿Sirve para Todo Tipo de Software?
-
-Puede aplicarse a muchos tipos de software porque los principios son transversales:
-usar menos energía, mover menos datos, aprovechar mejor hardware, medir antes de
-optimizar y elegir una unidad funcional clara.
-
-Pero no todos los proyectos obtienen el mismo valor. El paquete aporta más cuando:
+El paquete aporta más cuando:
 
 - Hay alto volumen de uso.
 - Existe infraestructura cloud o servidores persistentes.
@@ -75,25 +52,20 @@ El paquete aporta menos cuando:
 - Es un script de uso único o muy ocasional.
 - No hay información suficiente sobre volumen, utilización o entorno.
 
-## Cuándo Usar `$green-software-engineer`
+## 🧠 Cuándo usar `$green-software-engineer`
 
 Usa esta skill cuando necesites una opinión técnica más profunda:
 
-- Decisiones de arquitectura sensibles al carbono.
-- Explicación de principios de Green Software Foundation.
-- Selección de unidades funcionales para SCI.
-- Creación de una línea base SCI.
-- Planificación de SCI de consumidor o proveedor en IA/ML.
-- Decisiones sobre región cloud, autoscaling, batching, caché o planificación de cargas.
-- Revisión de sostenibilidad de una funcionalidad, servicio o arquitectura.
+| Situación | Ejemplo de prompt |
+| --- | --- |
+| Comparar arquitectura | `Usa $green-software-engineer para comparar polling, webhooks y eventos para este flujo.` |
+| Crear línea base SCI | `Ayúdame a definir la frontera SCI y unidad funcional de este servicio API.` |
+| Revisar IA/ML | `Evalúa el SCI de consumidor de este flujo RAG con llamadas a herramientas.` |
+| Decidir cloud/infra | `Compara estas opciones de autoscaling y scale-to-zero con tradeoffs de carbono.` |
 
-Ejemplo:
+La respuesta debería empezar con una recomendación clara y después explicar razonamiento, supuestos y tradeoffs.
 
-```text
-Usa $green-software-engineer para estimar el SCI de consumidor de nuestro servicio API con LLM.
-```
-
-## Cuándo Usar `$green-review`
+## 🔎 Cuándo usar `$green-review`
 
 Usa esta skill cuando quieras hallazgos concisos y estructurados:
 
@@ -111,20 +83,17 @@ Ejemplo:
 Usa $green-review para revisar este handler de API y detectar hotspots de carbono.
 ```
 
-## Referencias Internas
+## 📚 Referencias internas
 
-`$green-software-engineer` incluye:
+| Skill | Archivo | Uso |
+| --- | --- | --- |
+| `$green-software-engineer` | `references/sci-baseline.md` | Frontera, unidad funcional, energía, intensidad de carbono, carbono incorporado y supuestos. |
+| `$green-software-engineer` | `references/domain-guides.md` | Backend, bases de datos, cloud, infraestructura, pipelines, web/media y arquitectura general. |
+| `$green-software-engineer` | `references/ai-ml-carbon.md` | LLMs, RAG, agentes, inferencia, entrenamiento, embeddings y aceleradores. |
+| `$green-review` | `references/review-severity.md` | Severidad, priorización y prevención de greenwashing técnico. |
+| `$green-review` | `references/review-domains.md` | Preguntas de revisión por dominio. |
 
-- `references/sci-baseline.md`: pasos para definir frontera, unidad funcional, energía, intensidad de carbono, carbono incorporado y supuestos.
-- `references/domain-guides.md`: recomendaciones por dominio para backend, bases de datos, cloud, pipelines, web/media e IA/ML.
-- `references/ai-ml-carbon.md`: guía específica para LLMs, RAG, agentes, inferencia, entrenamiento y aceleradores.
-
-`$green-review` incluye:
-
-- `references/review-severity.md`: criterios para priorizar hallazgos por impacto probable y evitar greenwashing técnico.
-- `references/review-domains.md`: preguntas de revisión por dominio.
-
-## Formato Esperado de Revisión
+## 🧾 Formato esperado de revisión
 
 `$green-review` emite hallazgos con este formato:
 
@@ -141,28 +110,20 @@ Luego resume:
 - Mejora de mayor prioridad.
 - Si conviene crear una línea base SCI.
 
-Si no hay problemas materiales, la skill debe decirlo claramente y nombrar cualquier
-brecha residual de medición.
+Si no hay problemas materiales, la skill debe decirlo claramente y nombrar cualquier brecha residual de medición.
 
-## Criterios de Severidad
+## 📊 Criterios de severidad
 
-La severidad debe subir cuando el problema:
+| Severidad | Cuándo aplica |
+| --- | --- |
+| Alta | Ruta caliente, alto volumen, infraestructura siempre encendida, muchos datos, aceleradores/modelos grandes o impacto también en costo, latencia o confiabilidad. |
+| Media | Impacto relevante que debería abordarse en el sprint o iteración actual. |
+| Baja | Ineficiencia menor o mejora oportunista con bajo riesgo. |
+| Ya verde | Patrón materialmente eficiente que conviene preservar. |
 
-- Está en una ruta caliente.
-- Escala con volumen.
-- Mantiene infraestructura siempre encendida.
-- Mueve muchos datos.
-- Usa GPU/TPU, LLMs o modelos grandes.
-- También empeora costo, latencia o confiabilidad.
+La severidad baja si el cambio es poco frecuente, de bajo volumen, fuera de rutas críticas o depende de supuestos débiles.
 
-La severidad debe bajar cuando el cambio:
-
-- Es poco frecuente.
-- Tiene bajo volumen.
-- Está fuera de rutas críticas.
-- Depende de supuestos débiles.
-
-## Medición SCI
+## 🧮 Medición SCI
 
 Cuando el usuario necesite medición, usa:
 
@@ -170,24 +131,20 @@ Cuando el usuario necesite medición, usa:
 SCI = ((E * I) + M) / R
 ```
 
-Donde:
+| Variable | Significado |
+| --- | --- |
+| `E` | Energía consumida por el software. |
+| `I` | Intensidad de carbono de la electricidad. |
+| `M` | Emisiones incorporadas asignadas al software. |
+| `R` | Unidad funcional: solicitud, usuario, transacción, workflow, token, imagen, segundo de audio/video, etc. |
 
-- `E`: energía consumida por el software.
-- `I`: intensidad de carbono de la electricidad.
-- `M`: emisiones incorporadas asignadas al software.
-- `R`: unidad funcional.
+Una buena respuesta debe explicar la frontera de medición, la unidad funcional, los datos faltantes, los supuestos y el nivel de incertidumbre.
 
-Una buena respuesta debe explicar la frontera de medición, la unidad funcional, los
-datos faltantes, los supuestos y el nivel de incertidumbre.
+## 🛡️ Regla anti-greenwashing
 
-## Regla Anti-Greenwashing
+No afirmes que una alternativa es más verde solo por su categoría. Serverless, edge, servicios administrados, regiones de baja intensidad o modelos más pequeños deben evaluarse con volumen, utilización, latencia, retención, intensidad de carbono y frontera de medición.
 
-No se debe afirmar que una alternativa es más verde solo por su categoría. Serverless,
-edge, servicios administrados, regiones de baja intensidad o modelos más pequeños
-deben evaluarse con volumen, utilización, latencia, retención, intensidad de carbono
-y frontera de medición.
-
-## Referencias Externas
+## 🔗 Referencias externas
 
 - Green Software Patterns: https://patterns.greensoftware.foundation
 - Especificación SCI: https://sci.greensoftware.foundation

@@ -1,25 +1,56 @@
-# Paquete de Skills de Codex para Ingeniería de Software Verde
+# Green Software Engineer for Codex
 
-Paquete de skills para que Codex trabaje con criterios de ingeniería de software
-verde, eficiencia energética, reducción de impacto de carbono y medición SCI.
+![Green Software Engineer for Codex](docs/assets/green-software-codex-map.svg)
 
-El objetivo no es añadir una capa cosmética de sostenibilidad, sino ayudar a tomar
-mejores decisiones de ingeniería: menos trabajo innecesario, menos datos movidos,
-mejor utilización de infraestructura, medición más clara y tradeoffs explícitos.
+> Skills de Codex para revisar, diseñar y optimizar software con criterios de sostenibilidad, eficiencia energética y carbono.
 
-Este paquete aplica prácticas ampliamente aceptadas de ingeniería de software verde y criterios alineados con Green Software Foundation. Las recomendaciones deben validarse con medición, contexto de uso y tradeoffs técnicos antes de considerarse óptimas.
+[![Codex Skills](https://img.shields.io/badge/Codex-Skills-111827?style=for-the-badge)](#-skills-incluidas)
+[![Green Software](https://img.shields.io/badge/Green%20Software-Engineering-16a34a?style=for-the-badge)](#-qué-cubre)
+[![SCI](https://img.shields.io/badge/SCI-Ready-0f766e?style=for-the-badge)](#-medición-sci)
+[![Language](https://img.shields.io/badge/Docs-ES%2FEN-2563eb?style=for-the-badge)](#-uso-rápido)
 
-## Skills Incluidas
+Este repositorio contiene un paquete de skills para que Codex pueda trabajar con criterios de ingeniería de software verde: menos cómputo innecesario, menos datos movidos, mejor utilización de infraestructura, medición más clara y decisiones técnicas con tradeoffs explícitos.
 
-- `$green-software-engineer`: asesoría técnica para arquitectura baja en carbono,
-  Green Software Foundation, Software Carbon Intensity, IA/ML, cloud, bases de
-  datos, pipelines y decisiones de diseño.
-- `$green-review`: revisión estructurada para detectar hotspots de carbono en
-  código, infraestructura, APIs, bases de datos, jobs, pipelines, caché e IA/ML.
+La idea no es decorar el desarrollo con sostenibilidad. La idea es incorporarla como una preocupación práctica de ingeniería junto con rendimiento, costo, confiabilidad y experiencia de usuario.
 
-## Instalación
+## 🚀 Skills incluidas
 
-Instalación local en un proyecto:
+| Skill | Rol | Úsala para |
+| --- | --- | --- |
+| `$green-software-engineer` | Asesor técnico | Arquitectura baja en carbono, SCI, IA/ML, cloud, APIs, bases de datos, pipelines, caché, autoscaling y decisiones de diseño. |
+| `$green-review` | Revisor estructurado | Detectar hotspots de carbono en código, infraestructura, consultas, jobs, pipelines, caché y flujos de IA/ML. |
+
+## ✨ Por qué usarlo
+
+| Necesidad | Cómo ayuda Codex |
+| --- | --- |
+| Revisar una API caliente | Busca payloads grandes, round trips evitables, falta de caché, paginación o límites. |
+| Auditar cloud/infra | Detecta sobreaprovisionamiento, servicios siempre encendidos, falta de autoscaling o scale-to-zero. |
+| Evaluar IA/ML | Revisa fanout de modelos, límites de tokens, caché de embeddings, loops agénticos y uso de aceleradores. |
+| Crear una línea base SCI | Ayuda a definir frontera, unidad funcional, energía, intensidad de carbono y supuestos. |
+| Preparar una decisión de arquitectura | Compara opciones por carbono, costo, latencia, confiabilidad y complejidad. |
+
+## ⚡ Uso rápido
+
+Invoca la skill por nombre dentro de Codex:
+
+```text
+Usa $green-software-engineer para comparar polling y webhooks desde una perspectiva de software verde.
+```
+
+```text
+Usa $green-review para auditar este servicio Terraform por sobreaprovisionamiento.
+```
+
+También puedes pedir una revisión directa:
+
+```text
+Revisa este endpoint con criterios de sostenibilidad y dime los hotspots de carbono.
+```
+
+## 📦 Instalación
+
+Instalación local dentro de un proyecto:
 
 ```text
 mi-proyecto/
@@ -48,60 +79,58 @@ Instalación global:
 `-- green-review/
 ```
 
-## Uso Rápido
+## 🧭 Cuándo aporta más valor
 
-Invoca la skill por nombre:
+| Dominio | Hotspots típicos |
+| --- | --- |
+| Backend y APIs | Rutas calientes, polling, payloads sobredimensionados, trabajo síncrono pesado. |
+| Bases de datos | N+1, scans grandes, índices faltantes, lecturas sin límite, retención excesiva. |
+| Cloud e infraestructura | Capacidad inactiva, regiones, autoscaling, jobs batch, servicios siempre encendidos. |
+| Pipelines de datos | Reprocesamiento, particionado, compresión, frecuencia de jobs, procesamiento incremental. |
+| Web y media | Bundles grandes, imágenes/video pesados, exceso de JavaScript, caché/CDN ausente. |
+| IA/ML | LLMs grandes sin necesidad, prompts largos, embeddings repetidos, fanout de herramientas, GPUs/TPUs infrautilizadas. |
+
+## 🧮 Medición SCI
+
+Cuando la medición sea relevante, las skills usan como referencia:
 
 ```text
-Usa $green-software-engineer para comparar polling y webhooks desde una perspectiva de software verde.
+SCI = ((E * I) + M) / R
 ```
 
-```text
-Usa $green-review para auditar este servicio Terraform por sobreaprovisionamiento.
-```
+| Variable | Significado |
+| --- | --- |
+| `E` | Energía consumida por el software. |
+| `I` | Intensidad de carbono de la electricidad. |
+| `M` | Emisiones incorporadas asignadas al software. |
+| `R` | Unidad funcional: solicitud, usuario, transacción, workflow, token, imagen, etc. |
 
-## Casos de Uso
+## 🌱 Qué cubre
 
-Este paquete es útil para:
-
-- Revisar APIs, servicios backend y microservicios con alto volumen de solicitudes.
-- Detectar consultas ineficientes, N+1, lecturas sin límite y problemas de retención de datos.
-- Auditar infraestructura cloud, Terraform, Kubernetes y servicios siempre encendidos.
-- Evaluar jobs batch, colas, cron jobs, ETL, streaming y pipelines de datos.
-- Diseñar estrategias de caché, batching, autoscaling y scale-to-zero.
-- Comparar alternativas de arquitectura considerando carbono, costo, latencia y confiabilidad.
-- Crear una línea base SCI para medir impacto por solicitud, transacción, usuario, workflow o token.
-- Revisar sistemas de IA/ML: LLMs, RAG, agentes, embeddings, inferencia, entrenamiento y uso de GPU/TPU.
-- Optimizar aplicaciones web con mucho tráfico, assets pesados, imágenes, video o alto uso de red.
-- Preparar revisiones técnicas, ADRs o discusiones de arquitectura con criterios de sostenibilidad.
-
-## Alcance
-
-No está limitado a un lenguaje, framework o proveedor cloud específico. Puede ayudar
-en casi cualquier tipo de software, pero aporta más valor cuando el sistema consume
-infraestructura, procesa datos, mueve tráfico de red, ejecuta trabajos repetidos o
-usa IA/ML.
-
-En cambios puramente visuales, documentación, pruebas unitarias pequeñas o scripts
-de uso ocasional, el impacto de carbono suele ser bajo. En esos casos la skill puede
-ser útil para confirmar que no hay problemas materiales, pero probablemente no sea
-necesaria como revisión profunda.
-
-## Qué Cubre
-
-- Los 8 principios de Green Software Foundation.
-- Software Carbon Intensity: `SCI = ((E * I) + M) / R`.
-- Guía para crear líneas base SCI y documentar supuestos.
+- Principios de Green Software Foundation.
+- Software Carbon Intensity y selección de unidades funcionales.
 - SCI de consumidor y proveedor para sistemas de IA.
-- Revisión por dominio: backend, APIs, bases de datos, cloud, pipelines, web/media e IA/ML.
-- Criterios de severidad para priorizar hallazgos por impacto probable.
-- Caché, batching, scale-to-zero, planificación sensible al carbono y demand shaping.
+- Revisiones por dominio: backend, APIs, bases de datos, cloud, pipelines, web/media e IA/ML.
+- Caché, batching, scale-to-zero, demand shaping y planificación sensible al carbono.
+- Priorización de hallazgos por impacto probable, no por etiquetas "verdes".
 
-## Principio de Trabajo
+## 🧩 Estructura del repositorio
 
-El paquete evita asumir que una solución es más verde por etiqueta. Serverless,
-edge, servicios administrados, regiones cloud específicas o modelos más pequeños
-pueden ser buenas opciones, pero dependen de volumen, utilización, latencia,
-retención de datos, intensidad de carbono y frontera de medición.
+```text
+.
+|-- README.md
+|-- docs/
+|   |-- codex-guide.md
+|   `-- assets/
+|       `-- green-software-codex-map.svg
+`-- .codex/
+    `-- skills/
+        |-- green-software-engineer/
+        `-- green-review/
+```
 
-Consulta [docs/codex-guide.md](docs/codex-guide.md) para más detalles de uso.
+## 🛡️ Principio de trabajo
+
+El paquete evita asumir que una solución es más verde solo por su categoría. Serverless, edge, servicios administrados, regiones cloud específicas o modelos más pequeños pueden ser buenas opciones, pero dependen de volumen, utilización, latencia, retención de datos, intensidad de carbono y frontera de medición.
+
+Para más detalle, consulta la [guía de Codex](docs/codex-guide.md).
