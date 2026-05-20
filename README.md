@@ -9,9 +9,11 @@
 [![SCI](https://img.shields.io/badge/SCI-Ready-0f766e?style=for-the-badge)](#-medición-sci)
 [![Language](https://img.shields.io/badge/Docs-ES%2FEN-2563eb?style=for-the-badge)](#-uso-rápido)
 
-Este repositorio contiene un paquete de skills para que Codex pueda trabajar con criterios de ingeniería de software verde: menos cómputo innecesario, menos datos movidos, mejor utilización de infraestructura, medición más clara y decisiones técnicas con tradeoffs explícitos.
+Este repositorio contiene un paquete de skills para que Codex pueda trabajar con criterios de ingeniería de software verde: menos cómputo innecesario, menos datos movidos, mejor utilización de infraestructura, medición más clara y mejores decisiones técnicas con tradeoffs explícitos.
 
-La idea no es decorar el desarrollo con sostenibilidad. La idea es incorporarla como una preocupación práctica de ingeniería junto con rendimiento, costo, confiabilidad y experiencia de usuario.
+La idea detrás de este paquete no es “decorar” los desarrollos para que parezcan verdes. Su propósito es integrar la sostenibilidad digital como una auditoría de ingeniería, al mismo nivel que el rendimiento, el costo, la confiabilidad y la experiencia de usuario.
+
+Buscamos que cada decisión pueda evaluarse mediante datos concretos y bajo una lógica de trade-offs, permitiendo identificar mejoras reales, justificar técnicamente las decisiones y evitar prácticas de greenwashing.
 
 ## 🚀 Skills incluidas
 
@@ -24,7 +26,7 @@ La idea no es decorar el desarrollo con sostenibilidad. La idea es incorporarla 
 
 | Necesidad | Cómo ayuda Codex |
 | --- | --- |
-| Revisar una API caliente | Busca payloads grandes, round trips evitables, falta de caché, paginación o límites. |
+| Revisar una API | Busca payloads grandes, round trips evitables, falta de caché, paginación o límites. |
 | Auditar cloud/infra | Detecta sobreaprovisionamiento, servicios siempre encendidos, falta de autoscaling o scale-to-zero. |
 | Evaluar IA/ML | Revisa fanout de modelos, límites de tokens, caché de embeddings, loops agénticos y uso de aceleradores. |
 | Crear una línea base SCI | Ayuda a definir frontera, unidad funcional, energía, intensidad de carbono y supuestos. |
