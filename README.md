@@ -116,6 +116,36 @@ SCI = ((E * I) + M) / R
 - Caché, batching, scale-to-zero, demand shaping y planificación sensible al carbono.
 - Priorización de hallazgos por impacto probable, no por etiquetas "verdes".
 
+## 🏷️ Distintivo de auto-declaración
+
+Si un equipo usa estas skills para revisar un sistema y documenta sus decisiones de sostenibilidad, puede usar este distintivo como señal de auto-declaración:
+
+![Distintivo Software Verde Revisado](docs/assets/interdato-green-software-reviewed.svg)
+
+Embed recomendado:
+
+```html
+<a href="https://github.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex">
+  <img
+    src="https://raw.githubusercontent.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex/main/docs/assets/interdato-green-software-reviewed.svg"
+    alt="Software Verde Revisado con Green Software Engineer for Codex"
+    width="280"
+  />
+</a>
+```
+
+Este distintivo funciona como una declaración responsable del propio equipo. No representa una certificación oficial de Interdato, de Green Software Foundation ni de un auditor externo.
+
+| Para usarlo responsablemente | Qué debería existir |
+| --- | --- |
+| Revisión aplicada | El sistema fue revisado con `$green-review` o `$green-software-engineer`. |
+| Evidencia mínima | Hallazgos, decisiones, supuestos y tradeoffs quedaron documentados. |
+| Alcance claro | Se entiende qué servicio, producto, flujo o versión fue revisado. |
+| Mejoras gestionadas | Los hotspots materiales fueron corregidos, mitigados o aceptados explícitamente. |
+| Claims prudentes | No se afirma neutralidad, certificación o cumplimiento oficial sin evidencia independiente. |
+
+Cada organización o persona que use el distintivo es responsable de hacerlo en conformidad con la aplicación correcta de los estándares, principios y prácticas de software verde que declara haber seguido.
+
 ## 🧩 Estructura del repositorio
 
 ```text
@@ -125,6 +155,7 @@ SCI = ((E * I) + M) / R
 |   |-- codex-guide.md
 |   `-- assets/
 |       `-- green-software-codex-map.svg
+|       `-- interdato-green-software-reviewed.svg
 `-- .codex/
     `-- skills/
         |-- green-software-engineer/

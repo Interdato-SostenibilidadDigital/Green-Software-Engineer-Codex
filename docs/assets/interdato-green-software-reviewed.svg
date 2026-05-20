@@ -1,0 +1,24 @@
+<svg width="560" height="176" viewBox="0 0 560 176" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Distintivo Software Verde Revisado</title>
+  <desc id="desc">Distintivo de auto-declaración para sistemas revisados con las skills Green Software Engineer for Codex.</desc>
+  <rect x="1" y="1" width="558" height="174" rx="22" fill="#F8FAF8"/>
+  <rect x="1" y="1" width="558" height="174" rx="22" stroke="#204C43" stroke-width="2"/>
+  <path d="M0 120C67 95 108 107 162 127C223 149 280 155 347 126C422 93 480 93 560 113V176H0V120Z" fill="#E2EFEB"/>
+  <path d="M40 -22V34C40 54 56 70 76 70H83C103 70 119 86 119 106V191" stroke="#0B0B0B" stroke-width="12" stroke-linecap="round"/>
+  <path d="M486 -18V38C486 58 470 74 450 74H443C423 74 407 90 407 110V194" stroke="#0B0B0B" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="119" cy="106" r="14" fill="#0B0B0B"/>
+  <circle cx="407" cy="110" r="14" fill="#0B0B0B"/>
+  <g transform="translate(46 36)">
+    <path d="M80.8 24.9C59.7 10.7 29.9 14.6 13.7 35.4C-3.4 57.5.6 89.2 22.7 106.3C44.8 123.4 76.5 119.4 93.6 97.3C104.5 83.3 106.8 65.2 101.4 49.4C95.2 72.3 80.1 81.1 58.9 77.2C46.7 74.9 38.3 70.5 31.2 61.8C50.8 62.2 69.4 50.2 80.8 24.9Z" fill="#83A8A1"/>
+    <path d="M82.7 24.9C62.2 9.4 34.5 9.3 14.7 25C28.5 23.7 43.1 26.1 56.3 33.9C73.9 44.3 80.1 60.5 92.7 77.1C99.8 86.4 109.1 92 121.4 94.6C128.8 66.7 112.5 35.4 82.7 24.9Z" fill="#234E46"/>
+  </g>
+  <text x="186" y="48" fill="#234E46" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1.6">INTERDATO</text>
+  <text x="186" y="80" fill="#111827" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="800">Software Verde Revisado</text>
+  <text x="186" y="108" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600">Auto-declaración con Green Software Engineer for Codex</text>
+  <rect x="186" y="124" width="138" height="27" rx="13.5" fill="#234E46"/>
+  <text x="202" y="143" fill="#F8FAF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">SCI / GSF aligned</text>
+  <rect x="334" y="124" width="116" height="27" rx="13.5" fill="#DDEBE7"/>
+  <text x="351" y="143" fill="#234E46" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Codex Skills</text>
+  <rect x="460" y="124" width="68" height="27" rx="13.5" fill="#111827"/>
+  <text x="477" y="143" fill="#F8FAF8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Self</text>
+</svg>

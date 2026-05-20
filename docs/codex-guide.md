@@ -144,6 +144,24 @@ Una buena respuesta debe explicar la frontera de medición, la unidad funcional,
 
 No afirmes que una alternativa es más verde solo por su categoría. Serverless, edge, servicios administrados, regiones de baja intensidad o modelos más pequeños deben evaluarse con volumen, utilización, latencia, retención, intensidad de carbono y frontera de medición.
 
+## 🏷️ Uso del distintivo
+
+El distintivo `Software Verde Revisado` es una auto-declaración que un equipo puede mostrar cuando ha usado este paquete de skills para revisar un sistema, documentar sus decisiones y gestionar los hallazgos relevantes.
+
+```markdown
+[![Software Verde Revisado](https://raw.githubusercontent.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex/main/docs/assets/interdato-green-software-reviewed.svg)](https://github.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex)
+```
+
+Antes de usarlo, valida:
+
+- Qué sistema, servicio, flujo o versión fue revisado.
+- Qué skill se usó y con qué alcance.
+- Qué hallazgos se encontraron y cómo se gestionaron.
+- Qué supuestos, datos faltantes o límites de medición permanecen.
+- Que el claim no se presenta como certificación oficial, auditoría externa o garantía de neutralidad de carbono.
+
+La responsabilidad por el uso correcto del distintivo recae en quien lo publica. El distintivo no sustituye medición, evidencia, revisión independiente ni cumplimiento formal cuando el contexto lo requiera.
+
 ## 🔗 Referencias externas
 
 - Green Software Patterns: https://patterns.greensoftware.foundation
