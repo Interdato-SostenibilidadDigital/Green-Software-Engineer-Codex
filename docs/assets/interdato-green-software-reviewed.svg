@@ -4,17 +4,16 @@
   <rect x="1" y="1" width="518" height="126" rx="18" fill="#F8FAF8"/>
   <rect x="1" y="1" width="518" height="126" rx="18" stroke="#234E46" stroke-width="2"/>
   <rect x="15" y="15" width="98" height="98" rx="22" fill="#234E46"/>
-  <path d="M87 36C70 36 55 43 46 55C38 66 36 81 41 94C56 94 70 88 79 77C88 66 91 51 87 36Z" fill="#83A8A1"/>
   <path d="M47 68L59 80L83 52" stroke="#F8FAF8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M146 22H493" stroke="#DDEBE7" stroke-width="1.5"/>
-  <text x="146" y="42" fill="#234E46" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="1.4">AUTO-DECLARACIÓN RESPONSABLE</text>
+  <text x="146" y="42" fill="#234E46" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800">Auto-declaración responsable</text>
   <text x="146" y="72" fill="#111827" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="800">Software Verde Revisado</text>
   <text x="147" y="96" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">Green Software Engineer for Codex</text>
   <rect x="146" y="106" width="74" height="16" rx="8" fill="#DDEBE7"/>
   <text x="157" y="118" fill="#234E46" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="800">SCI aligned</text>
   <rect x="228" y="106" width="72" height="16" rx="8" fill="#E8F2EF"/>
   <text x="239" y="118" fill="#234E46" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="800">GSF aware</text>
-  <rect x="308" y="106" width="108" height="16" rx="8" fill="#111827"/>
-  <text x="321" y="118" fill="#F8FAF8" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="800">No certificación</text>
-  <text x="438" y="118" fill="#6B817C" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700">by Interdato</text>
+  <rect x="308" y="106" width="138" height="16" rx="8" fill="#111827"/>
+  <text x="377" y="118" fill="#F8FAF8" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="800" text-anchor="middle">Distintivo software verde</text>
+  <text x="462" y="118" fill="#6B817C" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700">Interdato</text>
 </svg>
