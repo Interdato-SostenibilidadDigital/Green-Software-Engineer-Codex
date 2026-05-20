@@ -1,6 +1,6 @@
 <svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Green Software Engineer for Codex</title>
-  <desc id="desc">A visual map showing Codex skills for sustainability reviews, carbon-aware architecture, and SCI measurement.</desc>
+  <title id="title">Green Software Engineer para Codex</title>
+  <desc id="desc">Mapa visual de las skills de Codex para revisiones de sostenibilidad, arquitectura sensible al carbono y medición SCI.</desc>
   <rect width="1200" height="520" rx="28" fill="#0B1220"/>
   <path d="M0 412C138 356 255 352 404 390C553 428 692 509 856 456C1003 409 1082 295 1200 318V520H0V412Z" fill="#12382E"/>
   <path d="M0 454C169 401 273 429 425 457C593 488 694 489 830 438C1004 372 1092 391 1200 421V520H0V454Z" fill="#14532D"/>
@@ -8,31 +8,31 @@
   <circle cx="1027" cy="118" r="42" fill="#84CC16" opacity="0.18"/>
   <rect x="70" y="62" width="1060" height="396" rx="24" fill="#F8FAFC"/>
   <rect x="70" y="62" width="1060" height="396" rx="24" stroke="#D1FAE5" stroke-width="2"/>
-  <text x="108" y="122" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="750">Green Software Engineer for Codex</text>
-  <text x="110" y="158" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="20">Sustainability-aware skills for code reviews, architecture decisions, and SCI measurement.</text>
+  <text x="108" y="122" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="750">Green Software Engineer para Codex</text>
+  <text x="110" y="158" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="20">Skills para revisar código, decidir arquitectura y medir impacto con SCI.</text>
   <g>
     <rect x="110" y="214" width="235" height="142" rx="18" fill="#ECFDF5" stroke="#86EFAC"/>
-    <text x="140" y="260" fill="#166534" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Review</text>
-    <text x="140" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">Find carbon hotspots</text>
-    <text x="140" y="322" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">in code and infra.</text>
+    <text x="140" y="260" fill="#166534" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Revisar</text>
+    <text x="140" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">Detecta hotspots</text>
+    <text x="140" y="322" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">en código e infra.</text>
   </g>
   <g>
     <rect x="380" y="214" width="235" height="142" rx="18" fill="#EFF6FF" stroke="#93C5FD"/>
-    <text x="410" y="260" fill="#1D4ED8" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Design</text>
-    <text x="410" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">Compare tradeoffs:</text>
-    <text x="410" y="322" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">carbon, cost, latency.</text>
+    <text x="410" y="260" fill="#1D4ED8" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Diseñar</text>
+    <text x="410" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">Compara carbono,</text>
+    <text x="410" y="322" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">costo y latencia.</text>
   </g>
   <g>
     <rect x="650" y="214" width="235" height="142" rx="18" fill="#F0FDFA" stroke="#5EEAD4"/>
-    <text x="680" y="260" fill="#0F766E" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Measure</text>
-    <text x="680" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">Define SCI boundaries,</text>
-    <text x="680" y="322" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">units, and assumptions.</text>
+    <text x="680" y="260" fill="#0F766E" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Medir</text>
+    <text x="680" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">Define frontera,</text>
+    <text x="680" y="322" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">unidad y supuestos.</text>
   </g>
   <g>
     <rect x="920" y="214" width="170" height="142" rx="18" fill="#FEFCE8" stroke="#FACC15"/>
-    <text x="950" y="260" fill="#A16207" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Act</text>
-    <text x="950" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">Reduce wasted</text>
-    <text x="950" y="322" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">work and data.</text>
+    <text x="950" y="260" fill="#A16207" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Actuar</text>
+    <text x="950" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">Reduce trabajo</text>
+    <text x="950" y="322" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="17">y datos extra.</text>
   </g>
   <path d="M350 285H374" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
   <path d="M615 285H644" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
@@ -42,5 +42,5 @@
   <path d="M909 278L918 285L909 292" stroke="#64748B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <rect x="109" y="386" width="982" height="34" rx="17" fill="#0F172A"/>
   <text x="142" y="409" fill="#DCFCE7" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="650">SCI = ((E * I) + M) / R</text>
-  <text x="380" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="16">Less energy. Less data movement. Better utilization. Clearer engineering decisions.</text>
+  <text x="380" y="409" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="16">Menos energía. Menos datos movidos. Mejor utilización. Decisiones más claras.</text>
 </svg>
