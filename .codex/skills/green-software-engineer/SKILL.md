@@ -54,6 +54,7 @@ Carga referencias solo cuando hagan falta para la tarea:
 - Lee `references/sci-baseline.md` cuando el usuario pida medición, estimación, línea base, comparación cuantitativa, unidad funcional o cálculo SCI.
 - Lee `references/domain-guides.md` cuando la pregunta sea sobre backend, APIs, bases de datos, cloud, infraestructura, pipelines, frontend/media o arquitectura general.
 - Lee `references/ai-ml-carbon.md` cuando haya LLMs, RAG, agentes, inferencia, entrenamiento, embeddings, GPUs/TPUs o evaluación de modelos.
+- Lee `references/green-hosting-evidence.md` cuando el usuario proporcione dominios públicos, pregunte por hosting verde o quiera complementar SCI con evidencia externa de infraestructura.
 
 ## Checklist de Revisión
 
@@ -63,6 +64,7 @@ Busca estos hotspots comunes:
 - Red: payloads sobredimensionados, falta de paginación o selección de campos, round trips evitables, APIs demasiado conversacionales, transferencias sin compresión, falta de CDN o caché edge para contenido cacheable.
 - Cómputo y almacenamiento: consultas N+1, índices faltantes, lecturas sin límite, cómputo repetido sin caché, formatos de archivo o tabla ineficientes, retención excesiva, logging o métricas de bajo valor y alto volumen.
 - Cloud e infraestructura: instancias sobreaprovisionadas, servicios siempre encendidos e inactivos, falta de autoscaling o scale-to-zero, regiones de alta intensidad de carbono sin razón, jobs batch que podrían correr en ventanas de menor carbono, cargas interrumpibles que no usan capacidad spot/preemptible.
+- Hosting verde: cuando haya dominios públicos, consulta o recomienda consultar The Green Web Foundation Greencheck API como evidencia parcial de infraestructura; no lo presentes como certificación del sistema completo.
 - Hardware y carbono incorporado: baja utilización, VMs autogestionadas innecesarias, tiempo inactivo evitable de GPU/TPU, hardware desproporcionado para la carga.
 - IA/ML: llamadas innecesarias a modelos grandes, falta de límites de prompt/salida, embeddings repetidos, inferencia sin caché, fanout excesivo de recuperación, bucles agénticos sin presupuestos, emisiones de entrenamiento acotadas de forma demasiado estrecha, valores brutos donde valores efectivos representan mejor cargas optimizadas.
 
@@ -100,3 +102,4 @@ Si no hay problemas materiales, dilo claramente y nombra cualquier brecha residu
 - Especificación SCI: https://sci.greensoftware.foundation
 - Especificación SCI for AI: https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md
 - Principios GSF: https://learn.greensoftware.foundation/practitioner/carbon-efficiency
+- The Green Web Foundation Greencheck API: https://developers.thegreenwebfoundation.org/api/greencheck/v3/check-single-domain/

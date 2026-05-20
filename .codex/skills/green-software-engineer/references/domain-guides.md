@@ -25,6 +25,7 @@ Carga esta referencia cuando el usuario pregunte por una arquitectura o cambio c
 - Serverless o managed no siempre es más verde: validar volumen, cold starts, región, eficiencia y utilización compartida.
 - Elegir región por latencia, datos, cumplimiento y carbono; no sacrificar requisitos críticos sin decirlo.
 - Usar spot/preemptible para workloads tolerantes a interrupciones.
+- Para dominios públicos, usar Green Web Foundation Greencheck API como evidencia parcial de hosting verde, sin tratarla como certificación del sistema completo.
 
 ## Pipelines de Datos
 

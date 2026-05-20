@@ -31,6 +31,7 @@ Buscamos que cada decisión pueda evaluarse mediante datos concretos y bajo una 
 | Evaluar IA/ML | Revisa fanout de modelos, límites de tokens, caché de embeddings, loops agénticos y uso de aceleradores. |
 | Crear una línea base SCI | Ayuda a definir frontera, unidad funcional, energía, intensidad de carbono y supuestos. |
 | Preparar una decisión de arquitectura | Compara opciones por carbono, costo, latencia, confiabilidad y complejidad. |
+| Validar hosting verde | Consulta evidencia externa de The Green Web Foundation para dominios públicos. |
 
 ## ⚡ Uso rápido
 
@@ -107,12 +108,31 @@ SCI = ((E * I) + M) / R
 | `M` | Emisiones incorporadas asignadas al software. |
 | `R` | Unidad funcional: solicitud, usuario, transacción, workflow, token, imagen, etc. |
 
+## 🌐 Verificación de hosting verde
+
+El paquete incluye una verificación auxiliar de evidencia de hosting verde para dominios públicos usando The Green Web Foundation Greencheck API.
+
+```powershell
+.\tools\green-hosting-check.ps1 example.com api.example.com
+```
+
+También puedes pedirlo desde Codex:
+
+```text
+Usa $green-review para revisar mi aplicación e incluye verificación de hosting verde para app.example.com y api.example.com.
+```
+
+La verificación devuelve dominio, resultado `green` / `grey` / `unknown`, proveedor detectado, evidencia disponible y fuente consultada.
+
+Este check complementa el análisis de infraestructura y puede informar el componente `I` de SCI, pero no certifica que todo el sistema sea verde. No cubre necesariamente backend privado, bases de datos, colas, CDNs externos, APIs de terceros, IA/ML, carbono incorporado ni consumo real de energía.
+
 ## 🌱 Qué cubre
 
 - Principios de Green Software Foundation.
 - Software Carbon Intensity y selección de unidades funcionales.
 - SCI de consumidor y proveedor para sistemas de IA.
 - Revisiones por dominio: backend, APIs, bases de datos, cloud, pipelines, web/media e IA/ML.
+- Verificación opcional de evidencia de hosting verde con The Green Web Foundation.
 - Caché, batching, scale-to-zero, demand shaping y planificación sensible al carbono.
 - Priorización de hallazgos por impacto probable, no por etiquetas "verdes".
 
@@ -156,6 +176,8 @@ Cada organización o persona que use el distintivo es responsable de hacerlo en 
 |   `-- assets/
 |       `-- green-software-codex-map.svg
 |       `-- interdato-green-software-reviewed.svg
+|-- tools/
+|   `-- green-hosting-check.ps1
 `-- .codex/
     `-- skills/
         |-- green-software-engineer/

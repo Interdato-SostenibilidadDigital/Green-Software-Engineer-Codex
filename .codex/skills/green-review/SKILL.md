@@ -13,6 +13,7 @@ Carga referencias solo cuando hagan falta para la revisión:
 
 - Lee `references/review-severity.md` para calibrar severidad, evitar greenwashing y distinguir hallazgos de alto, medio y bajo impacto.
 - Lee `references/review-domains.md` para adaptar la revisión al dominio: API/backend, bases de datos, cloud, pipelines de datos o IA/ML.
+- Lee `references/green-hosting-evidence.md` cuando la revisión incluya dominios públicos, frontend web, APIs públicas, CDN o preguntas sobre hosting verde.
 
 ## Alcance de Revisión
 
@@ -22,6 +23,7 @@ Revisa el código, arquitectura o configuración relevante para detectar:
 - Eficiencia de red: payloads sobredimensionados, falta de paginación, falta de selección de campos, transferencia innecesaria de datos, round trips evitables, APIs demasiado conversacionales, brechas de compresión y ausencia de CDN o caché edge para contenido cacheable.
 - Cómputo y almacenamiento: consultas N+1, índices faltantes, lecturas sin límite, cómputo repetido, estrategia de caché deficiente, formatos de almacenamiento ineficientes, retención excesiva y volumen innecesario de logs o telemetría.
 - Cloud e infraestructura: sobreaprovisionamiento, servicios siempre encendidos e inactivos, falta de autoscaling o scale-to-zero, regiones cloud de alta intensidad de carbono, jobs batch que podrían desplazarse en el tiempo y cargas interrumpibles que podrían usar capacidad spot o preemptible.
+- Hosting verde: si el usuario proporciona dominios públicos, usa The Green Web Foundation Greencheck API como evidencia externa de hosting; distingue dominio, proveedor detectado, evidencia y limitaciones del alcance.
 - Hardware y carbono incorporado: baja utilización, VMs autogestionadas innecesarias, aceleradores inactivos y hardware desproporcionado para la carga.
 - IA y ML: frontera SCI de consumidor vs proveedor, elección de unidad funcional, cascadas agénticas, fanout de herramientas/modelos/recuperación, inferencia o embeddings sin caché, alcance de entrenamiento, valores efectivos vs brutos y utilización de aceleradores.
 
@@ -69,6 +71,7 @@ Si el código o diseño ya está bien optimizado, dilo claramente. No inventes h
 - Alta: impacto de carbono significativo o desperdicio en una ruta caliente; corregir antes de enviar cuando sea práctico.
 - Media: impacto relevante que debería abordarse en el sprint actual o iteración de diseño.
 - Baja: ineficiencia menor o limpieza que conviene hacer de forma oportunista.
+- Informativa: evidencia contextual, como resultado Green Web, que ayuda a medir o decidir pero no implica por sí sola un problema material.
 - Ya Verde: patrón materialmente bien optimizado que debe preservarse.
 
 Eleva la severidad si el problema ocurre en una ruta caliente, escala con volumen, usa infraestructura siempre encendida, mueve muchos datos, usa aceleradores o modelos grandes, o también empeora costo, latencia o confiabilidad.
@@ -91,3 +94,4 @@ Reduce la severidad si el cambio es poco frecuente, de bajo volumen, fuera de ru
 - Especificación SCI: https://sci.greensoftware.foundation
 - Especificación SCI for AI: https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md
 - Principios GSF: https://learn.greensoftware.foundation/practitioner/carbon-efficiency
+- The Green Web Foundation Greencheck API: https://developers.thegreenwebfoundation.org/api/greencheck/v3/check-single-domain/

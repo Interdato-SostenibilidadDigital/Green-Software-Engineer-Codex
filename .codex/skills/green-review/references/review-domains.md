@@ -25,6 +25,8 @@ Usa esta referencia para elegir preguntas de revisión según el tipo de cambio.
 - ¿La región elegida equilibra latencia, cumplimiento, costo y carbono?
 - ¿La carga tolera spot/preemptible?
 - ¿Los jobs batch pueden moverse a ventanas de menor carbono?
+- Si hay dominios públicos, ¿existe evidencia de hosting verde en The Green Web Foundation?
+- ¿El dominio revisado representa realmente el frontend, API, CDN o solo una parte del sistema?
 
 ## Pipelines de Datos
 

@@ -10,6 +10,7 @@ Esta guía explica cómo usar las skills de Green Software Engineer dentro de Co
 | Revisar código o infraestructura | `$green-review` | Hallazgos priorizados por impacto probable de carbono. |
 | Estimar o preparar medición | `$green-software-engineer` | Frontera SCI, unidad funcional, datos faltantes y plan de medición. |
 | Auditar IA/ML o agentes | Ambas, según contexto | Revisión de tokens, fanout, herramientas, caché, entrenamiento e inferencia. |
+| Validar hosting verde | `$green-review` o script `tools/green-hosting-check.ps1` | Evidencia externa por dominio desde The Green Web Foundation. |
 
 ## 🌱 Propósito
 
@@ -30,6 +31,7 @@ Ambas skills están pensadas para proyectos reales, donde la sostenibilidad debe
 | Pipelines de datos | ETL, streaming, procesamiento incremental, particionado, compresión, frecuencia de jobs y reprocesamiento innecesario. |
 | IA y ML | LLMs, RAG, agentes, embeddings, inferencia, entrenamiento, evaluación, fanout de herramientas, presupuestos de tokens y uso de GPU/TPU. |
 | Web y media | Tráfico alto, assets pesados, imágenes, video, bundles grandes, exceso de JavaScript y transferencia de datos innecesaria. |
+| Hosting verde | Evidencia Green Web por dominio, proveedor detectado, documentos de soporte y límites del alcance. |
 | Arquitectura y ADRs | Comparación de alternativas por carbono, costo, latencia, confiabilidad, complejidad y cumplimiento. |
 
 ## ✅ Cuándo usarlo
@@ -90,8 +92,10 @@ Usa $green-review para revisar este handler de API y detectar hotspots de carbon
 | `$green-software-engineer` | `references/sci-baseline.md` | Frontera, unidad funcional, energía, intensidad de carbono, carbono incorporado y supuestos. |
 | `$green-software-engineer` | `references/domain-guides.md` | Backend, bases de datos, cloud, infraestructura, pipelines, web/media y arquitectura general. |
 | `$green-software-engineer` | `references/ai-ml-carbon.md` | LLMs, RAG, agentes, inferencia, entrenamiento, embeddings y aceleradores. |
+| `$green-software-engineer` | `references/green-hosting-evidence.md` | Evidencia de hosting verde por dominio y relación con SCI. |
 | `$green-review` | `references/review-severity.md` | Severidad, priorización y prevención de greenwashing técnico. |
 | `$green-review` | `references/review-domains.md` | Preguntas de revisión por dominio. |
+| `$green-review` | `references/green-hosting-evidence.md` | Formato de hallazgo y límites de la verificación Green Web. |
 
 ## 🧾 Formato esperado de revisión
 
@@ -119,6 +123,7 @@ Si no hay problemas materiales, la skill debe decirlo claramente y nombrar cualq
 | Alta | Ruta caliente, alto volumen, infraestructura siempre encendida, muchos datos, aceleradores/modelos grandes o impacto también en costo, latencia o confiabilidad. |
 | Media | Impacto relevante que debería abordarse en el sprint o iteración actual. |
 | Baja | Ineficiencia menor o mejora oportunista con bajo riesgo. |
+| Informativa | Evidencia contextual, como resultado Green Web, que ayuda a medir o decidir pero no implica por sí sola un problema material. |
 | Ya verde | Patrón materialmente eficiente que conviene preservar. |
 
 La severidad baja si el cambio es poco frecuente, de bajo volumen, fuera de rutas críticas o depende de supuestos débiles.
@@ -139,6 +144,31 @@ SCI = ((E * I) + M) / R
 | `R` | Unidad funcional: solicitud, usuario, transacción, workflow, token, imagen, segundo de audio/video, etc. |
 
 Una buena respuesta debe explicar la frontera de medición, la unidad funcional, los datos faltantes, los supuestos y el nivel de incertidumbre.
+
+## 🌐 Verificación de hosting verde
+
+Cuando exista un dominio público, Codex puede usar The Green Web Foundation Greencheck API como evidencia externa:
+
+```text
+GET https://api.thegreenwebfoundation.org/api/v3/greencheck/{hostname}
+```
+
+También puedes ejecutar el script local:
+
+```powershell
+.\tools\green-hosting-check.ps1 app.example.com api.example.com
+```
+
+Formato recomendado de interpretación:
+
+```text
+[INTENSIDAD DE CARBONO] Evidencia de hosting verde
+Resultado: green / grey / unknown
+Fuente: The Green Web Foundation Greencheck API
+Interpretación: evidencia parcial para el dominio consultado; no certifica el sistema completo.
+```
+
+Usa este resultado como insumo para infraestructura y SCI, especialmente para el componente `I`. No reemplaza medición de energía, región, utilización, carbono incorporado, backend privado, bases de datos, terceros o IA/ML.
 
 ## 🛡️ Regla anti-greenwashing
 
@@ -168,3 +198,4 @@ La responsabilidad por el uso correcto del distintivo recae en quien lo publica.
 - Especificación SCI: https://sci.greensoftware.foundation
 - Especificación SCI for AI: https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md
 - Principios GSF: https://learn.greensoftware.foundation/practitioner/carbon-efficiency
+- The Green Web Foundation Greencheck API: https://developers.thegreenwebfoundation.org/api/greencheck/v3/check-single-domain/
