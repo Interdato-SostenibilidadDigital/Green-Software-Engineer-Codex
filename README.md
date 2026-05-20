@@ -120,7 +120,7 @@ SCI = ((E * I) + M) / R
 
 Si un equipo usa estas skills para revisar un sistema y documenta sus decisiones de sostenibilidad, puede usar este distintivo como señal de auto-declaración:
 
-![Distintivo Software Verde Revisado](docs/assets/interdato-green-software-reviewed.svg)
+[![Distintivo Software Verde Revisado](docs/assets/interdato-green-software-reviewed.svg)](https://github.com/Interdato-SostenibilidadDigital/Green-Software-Engineer-Codex)
 
 Embed recomendado:
 
