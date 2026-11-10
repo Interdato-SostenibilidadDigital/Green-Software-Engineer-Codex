@@ -195,3 +195,7 @@ Cada organización o persona que use el distintivo es responsable de hacerlo en 
 El paquete evita asumir que una solución es más verde solo por su categoría. Serverless, edge, servicios administrados, regiones cloud específicas o modelos más pequeños pueden ser buenas opciones, pero dependen de volumen, utilización, latencia, retención de datos, intensidad de carbono y frontera de medición.
 
 Para más detalle, consulta la [guía de Codex](docs/codex-guide.md).
+
+## Seguridad y mantenimiento
+
+Consulta la [Política de seguridad](SECURITY.md) para reportar vulnerabilidades y conocer el alcance de los controles automáticos.
